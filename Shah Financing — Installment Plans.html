@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shah Financing — Electric Scooters on Easy Installments</title>
+<meta name="theme-color" content="#132048">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<style>
+  :root{
+    --navy:#132048;
+    --navy-2:#1C2E63;
+    --line:#2A3B6E;
+    --gold:#C9932E;
+    --gold-light:#E0B25C;
+    --paper:#F7F5EF;
+    --ink:#1A1D26;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth;}
+  html,body{height:100%;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Barlow Condensed',-apple-system,sans-serif; font-weight:700; line-height:0.98;}
+  a{color:inherit;}
+  img,svg{max-width:100%;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 24px;}
+
+  .wordmark{display:flex; align-items:center; gap:9px;}
+  .wordmark .wm-shah{font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:25px; color:var(--navy);}
+  .wordmark .bolt{color:var(--gold); font-size:20px; margin:0 1px;}
+  .wordmark .wm-sub{display:block; font-size:9.5px; font-weight:700; letter-spacing:0.18em; color:var(--gold); text-transform:uppercase; margin-top:1px;}
+  .hero .wordmark .wm-shah{color:var(--paper);}
+  .hero .wordmark .wm-sub{color:var(--gold-light);}
+
+  header.nav{position:sticky; top:0; z-index:50; background:rgba(247,245,239,0.94); backdrop-filter:blur(6px); border-bottom:1px solid #E4DCC8; padding:14px 0;}
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between;}
+  nav.links{display:flex; gap:22px; font-size:14.5px;}
+  nav.links a{text-decoration:none; opacity:0.72; color:var(--navy); font-weight:600; padding:4px 0;}
+  nav.links a.active{opacity:1; border-bottom:2px solid var(--gold);}
+  .nav-cta{background:var(--navy); color:#fff; padding:10px 20px; border-radius:3px; font-size:14px; text-decoration:none; font-weight:700;}
+  .burger{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px;}
+  .burger span{width:24px; height:2.5px; background:var(--navy); border-radius:2px;}
+  .mobile-menu{display:none; flex-direction:column; background:#fff; border-bottom:1px solid #E4DCC8; padding:6px 24px 14px;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:12px 0; border-bottom:1px solid #EEE7D5; text-decoration:none; color:var(--navy); font-weight:600; font-size:15px;}
+  .mobile-menu a:last-child{border-bottom:none;}
+  .page{display:none;}
+  .page.page-active{display:block;}
+
+  .hero{background:var(--navy); color:var(--paper); overflow:hidden; padding:60px 0 0;}
+  .hero .wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center;}
+  .hero .wordmark{margin-bottom:26px;}
+  .hero .wm-shah{font-size:30px;}
+  .kicker{color:var(--gold-light); font-size:14px; margin:0 0 14px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;}
+  .hero h1{font-size:clamp(38px,5.6vw,62px); margin:0 0 20px; max-width:12ch;}
+  .hero h1 em{font-style:normal; color:var(--gold);}
+  .hero p.lead{font-size:17.5px; color:#B9C0D6; max-width:40ch; margin:0 0 30px; line-height:1.55;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px;}
+  .btn{display:inline-block; padding:13px 24px; border-radius:3px; font-weight:700; font-size:15px; text-decoration:none; border:1px solid transparent; cursor:pointer;}
+  .btn-gold{background:var(--gold); color:#20170A;}
+  .btn-outline{border-color:#3B4A78; color:var(--paper);}
+  .hero-stats{display:flex; gap:30px; padding-top:18px; border-top:1px solid #263A6E;}
+  .hero-stats div{font-family:'Barlow Condensed'; font-size:28px; font-weight:700; color:var(--gold-light);}
+  .hero-stats span{display:block; font-family:-apple-system,sans-serif; font-size:12px; color:#8D96B5; font-weight:400;}
+  .hero-visual{position:relative; height:320px;}
+  .hero-visual svg{width:100%; height:100%;}
+
+  section{padding:70px 0;}
+  .section-head{max-width:580px; margin:0 0 40px;}
+  .section-head .kicker{color:#B08430;}
+  .section-head h2{font-size:clamp(28px,3.6vw,40px); margin:0 0 12px; color:var(--navy);}
+  .section-head p{color:#6B6552; font-size:15.5px; line-height:1.55; margin:0;}
+
+  .catalog{background:var(--paper);}
+  .filter-row{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:26px;}
+  .chip{border:1px solid #D9CFAF; background:#fff; padding:9px 18px; border-radius:20px; font-size:13.5px; font-weight:700; cursor:pointer; color:var(--navy);}
+  .chip.active{background:var(--navy); color:#fff; border-color:var(--navy);}
+
+  .brand-group{margin-bottom:14px; border:1px solid #E4DCC8; border-radius:8px; overflow:hidden; background:#fff;}
+  .brand-group summary{list-style:none; cursor:pointer; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; font-family:'Barlow Condensed'; font-weight:700; font-size:19px; color:var(--navy);}
+  .brand-group summary::-webkit-details-marker{display:none;}
+  .brand-group summary .count{font-family:-apple-system,sans-serif; font-size:12.5px; font-weight:400; color:#9A947F; margin-left:8px;}
+  .brand-group summary .chev{transition:transform 0.15s; color:var(--gold); font-size:13px;}
+  .brand-group[open] summary .chev{transform:rotate(90deg);}
+  .brand-group summary .accent{width:5px; height:22px; border-radius:2px; margin-right:12px; display:inline-block;}
+  .brand-group summary .sname{display:flex; align-items:center;}
+
+  .model-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 20px 20px;}
+  .model-card{border:1px solid #EDE6D3; border-radius:6px; padding:16px; background:#FCFBF7;}
+  .model-card h4{font-size:19px; margin:0 0 8px; color:var(--ink); font-family:'Barlow Condensed'; font-weight:700;}
+  .spec-strip{display:flex; flex-wrap:wrap; gap:6px 14px; margin-bottom:12px;}
+  .spec-strip .s{font-size:12px; color:#7C7460;}
+  .spec-strip .s b{color:var(--ink); font-weight:700;}
+  .model-price{display:flex; justify-content:space-between; align-items:baseline; border-top:1px dashed #DFD6BB; padding-top:11px;}
+  .model-price .lbl{font-size:11px; color:#9A947F; text-transform:uppercase; letter-spacing:0.04em;}
+  .model-price .val{font-family:'Barlow Condensed'; font-size:20px; font-weight:700; color:var(--navy);}
+  .cat-note{font-size:12.5px; color:#8A8271; margin-top:8px;}
+
+  .calc{background:#EFE7D2;}
+  .calc-box{background:#fff; border:1px solid #DECE9F; border-radius:8px; padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:36px;}
+  .calc-controls label{display:block; font-size:13.5px; font-weight:700; margin:0 0 6px; color:var(--navy);}
+  .calc-controls .field{margin-bottom:22px;}
+  select, input[type=range]{width:100%;}
+  select{padding:11px 12px; border:1px solid #D3C79E; border-radius:3px; font-size:15px; background:#fff;}
+  input[type=range]{accent-color:var(--gold);}
+  .calc-out{background:var(--navy); color:var(--paper); border-radius:6px; padding:26px; display:flex; flex-direction:column; justify-content:center;}
+  .calc-out .line{display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid #263A6E; font-size:14.5px;}
+  .calc-out .line:last-child{border-bottom:none;}
+  .calc-out .line b{font-family:'Barlow Condensed'; font-size:19px; font-weight:700;}
+  .calc-out .headline{font-size:13px; color:#9AA3C0; margin:0 0 4px;}
+  .calc-out .monthly{font-family:'Barlow Condensed'; font-size:42px; color:var(--gold-light); font-weight:700; margin:0 0 18px;}
+
+  .how{background:var(--navy); color:var(--paper);}
+  .how .section-head h2{color:var(--paper);}
+  .how .section-head p{color:#9AA3C0;}
+  .how .section-head .kicker{color:var(--gold-light);}
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #263A6E;}
+  .step{padding:26px 22px 0; border-right:1px solid #263A6E;}
+  .step:last-child{border-right:none;}
+  .step .n{font-family:'Barlow Condensed'; font-size:15px; color:var(--gold-light); margin-bottom:10px;}
+  .step h3{font-size:20px; margin:0 0 8px;}
+  .step p{font-size:14px; color:#9AA3C0; line-height:1.5; margin:0 0 26px;}
+
+  .apply{background:var(--paper);}
+  .apply-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+  .form-card{background:#fff; border:1px solid #E4DCC8; border-radius:8px; padding:32px;}
+  .form-row{margin-bottom:18px;}
+  .form-row label{display:block; font-size:13.5px; font-weight:700; margin-bottom:6px; color:var(--navy);}
+  .form-row input{width:100%; padding:12px 13px; border:1px solid #D3C79E; border-radius:3px; font-size:15px; background:#FBF9F3;}
+  .form-row input:focus{outline:2px solid var(--gold); outline-offset:1px; border-color:transparent;}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .submit-btn{width:100%; background:var(--navy); color:#fff; border:none; padding:15px; border-radius:3px; font-size:15.5px; font-weight:700; cursor:pointer;}
+  .apply-side h2{font-size:clamp(26px,3.6vw,36px); margin:0 0 16px; color:var(--navy);}
+  .apply-side p{color:#6B6552; line-height:1.6; margin:0 0 22px; font-size:15.5px;}
+  .req-list{list-style:none; margin:0; padding:0;}
+  .req-list li{padding:12px 0; border-bottom:1px solid #E4DCC8; font-size:14.5px; color:#3F3A2D; display:flex; gap:10px;}
+  .req-list li::before{content:"→"; color:var(--gold); font-weight:700;}
+
+  .eligibility{background:#fff;}
+  .elig-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .elig-card{border:1px solid #E4DCC8; border-radius:8px; padding:26px 28px; background:var(--paper);}
+  .elig-card h3{font-size:21px; margin:0 0 14px; color:var(--navy);}
+  .elig-card p{font-size:14.5px; color:#5B5545; line-height:1.6; margin:0;}
+  .doc-list{list-style:none; margin:0; padding:0;}
+  .doc-list li{
+    display:flex; gap:10px; padding:9px 0; border-bottom:1px solid #E8E1CC;
+    font-size:14px; color:#3F3A2D; line-height:1.45;
+  }
+  .doc-list li:last-child{border-bottom:none;}
+  .doc-list .box{
+    flex:0 0 16px; width:16px; height:16px; border:2px solid var(--gold); border-radius:3px;
+    margin-top:2px;
+  }
+  .notice-box{
+    margin-top:18px; background:#FBF1DE; border:1px solid #E5CE95; border-radius:6px;
+    padding:16px 18px; font-size:13.5px; color:#5B4A1E; line-height:1.6;
+  }
+  .notice-box b{color:var(--navy);}
+  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; align-items:center;}
+  footer a{color:var(--gold-light); text-decoration:none;}
+
+  .wa-float{position:fixed; bottom:24px; right:24px; bottom:calc(24px + env(safe-area-inset-bottom,0px)); background:var(--gold); color:#20170A; width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; z-index:60; box-shadow:0 6px 18px rgba(0,0,0,0.25);}
+
+  @media (max-width:820px){
+    nav.links{display:none;}
+    .burger{display:flex;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-visual{height:200px; order:-1;}
+    .model-grid{grid-template-columns:1fr 1fr;}
+    .calc-box{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .step{border-right:none; border-bottom:1px solid #263A6E; padding-bottom:20px;}
+    .apply-grid{grid-template-columns:1fr;}
+    .elig-grid{grid-template-columns:1fr;}
+    .two-col{grid-template-columns:1fr;}
+  }
+  @media (max-width:520px){ .model-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="wordmark">
+      <span class="wm-shah">SH<span class="bolt">⚡</span>H</span>
+      <span class="wm-sub">Financing Co.</span>
+    </div>
+    <nav class="links" id="navLinks">
+      <a href="#/home" data-route="home">Home</a>
+      <a href="#/models" data-route="models">Models</a>
+      <a href="#/apply" data-route="apply">Apply</a>
+      <a href="#/contact" data-route="contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#/apply">Apply Now</a>
+    <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#/home" data-route="home">Home</a>
+    <a href="#/models" data-route="models">Models</a>
+    <a href="#/apply" data-route="apply">Apply</a>
+    <a href="#/contact" data-route="contact">Contact</a>
+  </div>
+</header>
+
+<div class="page" id="page-home">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="wordmark">
+        <span class="wm-shah">SH<span class="bolt">⚡</span>H</span>
+        <span class="wm-sub">Financing Company</span>
+      </div>
+      <p class="kicker">Electric Scooter Installment Plans</p>
+      <h1>Ride today.<br>Pay it off<br><em>a little at a time.</em></h1>
+      <p class="lead">15+ electric scooter models, real installment plans, no bank paperwork. 50% down payment, pay the rest over 3 to 12 months.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#/apply">Apply for Installment</a>
+        <a class="btn btn-outline" href="#/models">See Models</a>
+      </div>
+      <div class="hero-stats">
+        <div>50%<span>Down payment</span></div>
+        <div>3-12mo<span>Flexible tenure</span></div>
+        <div>4.5%<span>Markup per month</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="90" cy="220" r="48" stroke="#C9932E" stroke-width="4"/>
+        <circle cx="300" cy="220" r="48" stroke="#C9932E" stroke-width="4"/>
+        <path d="M90 220 L170 120 L230 120 L300 220" stroke="#F7F5EF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M170 120 L150 220 L90 220" stroke="#F7F5EF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M230 120 L260 90 L300 90" stroke="#F7F5EF" stroke-width="4" stroke-linecap="round"/>
+        <rect x="255" y="95" width="30" height="14" rx="3" fill="#C9932E"/>
+        <circle cx="150" cy="220" r="4" fill="#F7F5EF"/>
+        <path d="M60 60 L90 60 L75 90 L100 90 L55 140" stroke="#C9932E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Four Steps</p>
+      <h2>From inquiry to riding home</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Message or visit</h3><p>Send your details on WhatsApp or come see the bikes at the showroom.</p></div>
+      <div class="step"><div class="n">02</div><h3>Choose your plan</h3><p>Pick the model and tenure that fits your budget.</p></div>
+      <div class="step"><div class="n">03</div><h3>Sign & pay down payment</h3><p>CNIC, guarantor details and signed agreement — done at the showroom.</p></div>
+      <div class="step"><div class="n">04</div><h3>Ride away</h3><p>Bike handed over the same day, tracker fitted, monthly installments begin.</p></div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-home -->
+
+<div class="page" id="page-models">
+<section class="catalog" id="models">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">The Line-up</p>
+      <h2>15+ models, every one under PKR 270,000</h2>
+      <p>All units come with manufacturer warranty. Prices below are cash price — installment terms are calculated in the tool below. Transportation cost will be applied if ordering in Balochistan.</p>
+    </div>
+    <div class="filter-row" id="filterRow">
+      <button class="chip active" data-brand="all">All Brands</button>
+      <button class="chip" data-brand="YJ Future">YJ Future</button>
+      <button class="chip" data-brand="Volt">Volt</button>
+      <button class="chip" data-brand="Evee">Evee</button>
+      <button class="chip" data-brand="Shah E-Mobility">Shah E-Mobility</button>
+    </div>
+    <div id="catalogGroups"></div>
+    <p class="cat-note">Prices as per current supplier price lists — subject to change without notice.</p>
+  </div>
+</section>
+
+<section class="calc" id="calculator">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Know Your Numbers</p>
+      <h2>Work out your monthly installment</h2>
+      <p>Adjust the bike and tenure to see what you'd pay each month. Down payment is fixed at 50%.</p>
+    </div>
+    <div class="calc-box">
+      <div class="calc-controls">
+        <div class="field">
+          <label for="bikeSelect">Bike model</label>
+          <select id="bikeSelect"></select>
+        </div>
+        <div class="field">
+          <label>Down payment — fixed at <b>50%</b> for all plans</label>
+        </div>
+        <div class="field">
+          <label for="tenure">Tenure — <span id="tenureVal">6 months</span></label>
+          <input type="range" id="tenure" min="3" max="12" step="1" value="6">
+        </div>
+      </div>
+      <div class="calc-out">
+        <p class="headline">Estimated monthly installment</p>
+        <p class="monthly" id="monthlyOut">₨0</p>
+        <div class="line"><span>Down payment (50%)</span><b id="downOut">₨0</b></div>
+        <div class="line"><span>Financed amount</span><b id="financedOut">₨0</b></div>
+        <div class="line"><span>Markup (4.5%/month)</span><b id="markupOut">₨0</b></div>
+        <div class="line"><span>Total payable</span><b id="totalOut">₨0</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /page-models -->
+
+<div class="page" id="page-apply">
+<section class="eligibility" id="eligibility">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Before You Apply</p>
+      <h2>Who can apply, and what you'll need</h2>
+      <p>Please read this carefully — having everything ready speeds up your approval.</p>
+    </div>
+    <div class="elig-grid">
+      <div class="elig-card">
+        <h3>Who can apply</h3>
+        <p>You may apply if you are a salaried employee with a regular salary paid into your bank account. We will review your income, documents and payment ability before approval.</p>
+
+        <h3 style="margin-top:26px;">Guarantor rules</h3>
+        <p>Two guarantors are required. Each guarantor must be a salaried employee, must provide correct documents, and must sign the guarantor section of the form. We may call the guarantor or employer to verify the information.</p>
+
+        <div class="notice-box">
+          <b>Important:</b> Please provide true and complete information. Approval is not guaranteed. Do not hand over original CNICs. Keep a copy of the completed form and your payment schedule.
+        </div>
+      </div>
+
+      <div class="elig-card">
+        <h3>Documents you must attach</h3>
+        <ul class="doc-list">
+          <li><span class="box"></span>One recent passport-size photograph of the applicant</li>
+          <li><span class="box"></span>Clear copy of the applicant's CNIC, front and back</li>
+          <li><span class="box"></span>Copy of the applicant's employee card — or an employer letter if no employee card</li>
+          <li><span class="box"></span>Salary bank statement for the last 12 months from the account where salary is received</li>
+          <li><span class="box"></span>Salary slips for the latest 3 months, if available</li>
+          <li><span class="box"></span>Post-dated installment cheques from the same salary bank account, as required by the selected plan</li>
+          <li><span class="box"></span>Clear copy of CNIC and employee card for each guarantor</li>
+          <li><span class="box"></span>Salary proof for each guarantor — latest salary slips or bank statement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="apply" id="apply">
+  <div class="wrap">
+    <p class="kicker" style="color:#B08430; font-size:14px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">Get Started</p>
+    <h2 style="color:var(--navy); font-size:clamp(26px,3.6vw,36px); margin:0 0 10px;">Apply for your installment plan online</h2>
+    <p style="color:#6B6552; font-size:15.5px; max-width:640px; margin:0 0 26px;">Fill in the application form below — it takes about 5 minutes. We'll review your details and reach out on WhatsApp to confirm your plan and book document verification.</p>
+
+    <div class="form-card" style="max-width:640px; margin:0 auto; text-align:center; padding:48px 32px;">
+      <div style="width:64px; height:64px; border-radius:50%; background:var(--gold); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; font-size:28px;">📝</div>
+      <h3 style="color:var(--navy); font-size:22px; margin:0 0 10px;">Installment Application Form</h3>
+      <p style="color:#6B6552; font-size:14.5px; margin:0 0 26px; line-height:1.6;">Applicant details, employment info, bike & plan selection, and both guarantors — all in one short form.</p>
+
+      <!-- GOOGLE_FORM_LINK: replace the href below with your real Google Form link -->
+      <a href="https://forms.gle/xcrEpmZYNxjaRPWi9" target="_blank" rel="noopener" class="submit-btn" style="display:inline-block; text-decoration:none; width:auto; padding:16px 40px;">Open Application Form</a>
+
+      <p style="font-size:12.5px; color:#8A8271; margin-top:18px;">Opens in a new tab. Prefer to talk first? <a href="https://wa.me/923361266236" target="_blank" rel="noopener" style="color:var(--navy); font-weight:600;">Message us on WhatsApp</a> instead.</p>
+    </div>
+  </div>
+</section>
+</div><!-- /page-apply -->
+
+<div class="page" id="page-contact">
+<section style="background:var(--navy); color:var(--paper); padding:70px 0;">
+  <div class="wrap">
+    <p class="kicker" style="color:var(--gold-light);">Get In Touch</p>
+    <h2 style="color:#fff; font-size:clamp(28px,3.6vw,40px); margin:0 0 20px;">Visit the showroom or message us</h2>
+    <p style="color:#B9C0D6; font-size:16px; max-width:520px; margin:0 0 26px;">Come see the bikes in person, or reach out on WhatsApp for a quick reply. We'll confirm your plan and book a visit for documents and signing.</p>
+    <a class="btn btn-gold" href="https://wa.me/923361266236" target="_blank" rel="noopener">Message us on WhatsApp</a>
+    <p style="color:#9AA3C0; font-size:14.5px; margin-top:22px;">WhatsApp: 0336-1266236</p>
+  </div>
+</section>
+</div><!-- /page-contact -->
+
+<footer>
+  <div class="wrap">
+    <div class="wordmark">
+      <span class="wm-shah" style="color:#F7F5EF; font-size:19px;">SH<span class="bolt">⚡</span>H</span>
+      <span class="wm-sub">Financing Co.</span>
+    </div>
+    <div><a href="#/apply">Apply for a bike →</a></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/923361266236" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#20170A"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.98 0-1.42.74-2.11 1-2.4.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.14.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.65.78 1.93.92.29.15.48.22.55.34.07.13.07.72-.17 1.4z"/></svg>
+</a>
+
+<script>
+  const WA_NUMBER = '923361266236';
+  const MARKUP_PER_MONTH = 0.045;
+  const brandColor = { 'YJ Future':'#1F7A46', 'Volt':'#C9932E', 'Evee':'#5A7A9C', 'Shah E-Mobility':'#132048' };
+
+  const MODELS = [
+    ['Evee','Mito+ (Graphene)','30-35 km/h','70-90 km','60V 32AH',137000],
+    ['YJ Future','Twister','45-50 km/h','70-90 km','60V 32AH',167000],
+    ['Volt','Thunder','50 km/h','up to 85 km','60V 26AH',171000],
+    ['Evee','Gen-Z (Graphene)','45-50 km/h','70-80 km','72V 32AH',180000],
+    ['YJ Future','Azadi Pro','45-50 km/h','70-90 km','60V 32AH',185000],
+    ['Volt','Thunder Pro','55 km/h','up to 105 km','72V 32AH',192000],
+    ['Volt','Titan Li','60 km/h','up to 105 km','72V 30AH',270000],
+    ['Volt','Storm','55 km/h','up to 120 km','72V 36AH',199000],
+    ['Volt','Thunder Li Plus','50 km/h','up to 75 km','60V 24AH LFP',205000],
+    ['Evee','S1 (Graphene)','50-55 km/h','70-90 km','72V 36AH',206000],
+    ['YJ Future','S7','45-50 km/h','70-80 km','60V 32AH',170000],
+    ['Evee','Gen-Z (Lithium)','45-50 km/h','70-80 km','76.8V 30AH',225000],
+    ['YJ Future','Azadi Pro (Lithium)','45-55 km/h','70-90 km','73.6V 30AH LFP',220000],
+    ['Volt','Titan Graphene','65 km/h','up to 125 km','72V 36AH',230000],
+    ['YJ Future','Azadi C1 (Lithium)','50-55 km/h','80-100 km','73.6V 30AH LFP',230000],
+    ['Evee','SQUBE (Graphene)','60-65 km/h','70-90 km','72V 38AH',239000],
+    ['Evee','Gen-Z Pro (Lithium)','45-50 km/h','60-80 km','76.8V 30AH',245000],
+    ['Volt','Thunder Li+ Pro','55 km/h','up to 125 km','72V 30AH LFP',237000],
+    ['Evee','S1 (Lithium)','50-55 km/h','70-90 km','76.8V 32AH',269000],
+  ].sort((a,b)=>a[5]-b[5]);
+
+  function fmt(n){ return '₨' + Math.round(n).toLocaleString('en-PK'); }
+
+  const catalogGroups = document.getElementById('catalogGroups');
+  const bikeSelect = document.getElementById('bikeSelect');
+
+  function renderCatalog(filter){
+    catalogGroups.innerHTML = '';
+    ['YJ Future','Volt','Evee','Shah E-Mobility'].forEach(brand=>{
+      if(filter!=='all' && filter!==brand) return;
+      const rows = MODELS.filter(m=>m[0]===brand);
+      if(!rows.length) return;
+      const details = document.createElement('details');
+      details.className = 'brand-group';
+      details.open = true;
+      const cards = rows.map(([b,name,speed,range,batt,price])=>`
+        <div class="model-card">
+          <h4>${name}</h4>
+          <div class="spec-strip">
+            <span class="s">Speed <b>${speed}</b></span>
+            <span class="s">Range <b>${range}</b></span>
+            <span class="s">Battery <b>${batt}</b></span>
+          </div>
+          <div class="model-price"><span class="lbl">Cash Price</span><span class="val">${fmt(price)}</span></div>
+        </div>`).join('');
+      details.innerHTML = `
+        <summary>
+          <span class="sname"><span class="accent" style="background:${brandColor[brand]}"></span>${brand} <span class="count">${rows.length} models</span></span>
+          <span class="chev">▶</span>
+        </summary>
+        <div class="model-grid">${cards}</div>`;
+      catalogGroups.appendChild(details);
+    });
+  }
+  renderCatalog('all');
+
+  document.getElementById('filterRow').addEventListener('click', function(e){
+    if(e.target.tagName !== 'BUTTON') return;
+    [...this.children].forEach(c=>c.classList.remove('active'));
+    e.target.classList.add('active');
+    renderCatalog(e.target.dataset.brand);
+  });
+
+  MODELS.forEach(([brand,name,,,,price])=>{
+    const opt = document.createElement('option');
+    opt.value = price;
+    opt.textContent = `${brand} ${name} — ${fmt(price)}`;
+    bikeSelect.appendChild(opt);
+  });
+  bikeSelect.selectedIndex = Math.floor(MODELS.length/2);
+
+  const tenure = document.getElementById('tenure');
+  const tenureVal = document.getElementById('tenureVal');
+  const monthlyOut = document.getElementById('monthlyOut');
+  const downOut = document.getElementById('downOut');
+  const financedOut = document.getElementById('financedOut');
+  const markupOut = document.getElementById('markupOut');
+  const totalOut = document.getElementById('totalOut');
+
+  function calc(){
+    const price = Number(bikeSelect.value);
+    const months = Number(tenure.value);
+    tenureVal.textContent = months + ' months';
+    const down = price * 0.5;
+    const financed = price - down;
+    const markup = financed * MARKUP_PER_MONTH * months;
+    const totalFinancedWithMarkup = financed + markup;
+    const monthly = totalFinancedWithMarkup / months;
+    const totalPayable = down + totalFinancedWithMarkup;
+    monthlyOut.textContent = fmt(monthly);
+    downOut.textContent = fmt(down);
+    financedOut.textContent = fmt(financed);
+    markupOut.textContent = fmt(markup);
+    totalOut.textContent = fmt(totalPayable);
+  }
+  [bikeSelect, tenure].forEach(el => el.addEventListener('input', calc));
+  calc();
+
+  // ---------- Hash-based router (multi-page feel, single file) ----------
+  const PAGES = ['home','models','apply','contact'];
+  function showRoute(){
+    let route = (location.hash || '#/home').replace('#/','').split('?')[0];
+    if(!PAGES.includes(route)) route = 'home';
+    PAGES.forEach(p=>{
+      const el = document.getElementById('page-'+p);
+      if(el) el.classList.toggle('page-active', p===route);
+    });
+    document.querySelectorAll('[data-route]').forEach(a=>{
+      a.classList.toggle('active', a.dataset.route===route);
+    });
+    document.getElementById('mobileMenu').classList.remove('open');
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange', showRoute);
+  showRoute();
+
+  // ---------- Mobile menu toggle ----------
+  document.getElementById('burgerBtn').addEventListener('click', function(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
