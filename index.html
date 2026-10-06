@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shah Financing — Electric Scooters on Easy Installments</title>
+<title>Shah Financing — Buy Now, Pay on Installments</title>
 <meta name="theme-color" content="#132048">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 <style>
@@ -29,7 +29,7 @@
   .wrap{max-width:1100px; margin:0 auto; padding:0 24px;}
 
   .wordmark{display:flex; align-items:center; gap:9px;}
-  .wordmark .wm-shah{font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:25px; color:var(--navy);}
+  .wordmark .wm-shah{font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:25px; color:var(--navy); letter-spacing:0.03em;}
   .wordmark .bolt{color:var(--gold); font-size:20px; margin:0 1px;}
   .wordmark .wm-sub{display:block; font-size:9.5px; font-weight:700; letter-spacing:0.18em; color:var(--gold); text-transform:uppercase; margin-top:1px;}
   .hero .wordmark .wm-shah{color:var(--paper);}
@@ -50,23 +50,55 @@
   .page{display:none;}
   .page.page-active{display:block;}
 
-  .hero{background:var(--navy); color:var(--paper); overflow:hidden; padding:60px 0 0;}
-  .hero .wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center;}
-  .hero .wordmark{margin-bottom:26px;}
+  .hero{background:var(--navy); color:var(--paper); overflow:hidden; padding:80px 0 70px;}
+  .hero .wrap{max-width:720px; text-align:center;}
+  .hero .wordmark{margin-bottom:26px; justify-content:center;}
   .hero .wm-shah{font-size:30px;}
   .kicker{color:var(--gold-light); font-size:14px; margin:0 0 14px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;}
-  .hero h1{font-size:clamp(38px,5.6vw,62px); margin:0 0 20px; max-width:12ch;}
+  .hero h1{font-size:clamp(38px,5.6vw,62px); margin:0 auto 20px; max-width:14ch;}
   .hero h1 em{font-style:normal; color:var(--gold);}
-  .hero p.lead{font-size:17.5px; color:#B9C0D6; max-width:40ch; margin:0 0 30px; line-height:1.55;}
-  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px;}
+  .hero p.lead{font-size:17.5px; color:#B9C0D6; max-width:48ch; margin:0 auto 30px; line-height:1.55;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px; justify-content:center;}
   .btn{display:inline-block; padding:13px 24px; border-radius:3px; font-weight:700; font-size:15px; text-decoration:none; border:1px solid transparent; cursor:pointer;}
   .btn-gold{background:var(--gold); color:#20170A;}
   .btn-outline{border-color:#3B4A78; color:var(--paper);}
-  .hero-stats{display:flex; gap:30px; padding-top:18px; border-top:1px solid #263A6E;}
+  .hero-stats{display:flex; gap:30px; padding-top:18px; border-top:1px solid #263A6E; justify-content:center;}
   .hero-stats div{font-family:'Barlow Condensed'; font-size:28px; font-weight:700; color:var(--gold-light);}
   .hero-stats span{display:block; font-family:-apple-system,sans-serif; font-size:12px; color:#8D96B5; font-weight:400;}
-  .hero-visual{position:relative; height:320px;}
-  .hero-visual svg{width:100%; height:100%;}
+
+  .cat-cards{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .cat-card-lg{
+    background:#fff; border:1px solid #E4DCC8; border-radius:10px; padding:32px 28px;
+    text-decoration:none; color:var(--ink); display:block; transition:border-color .15s;
+  }
+  .cat-card-lg:hover{border-color:var(--gold);}
+  .cat-card-lg .badge{
+    width:44px; height:44px; border-radius:8px; background:var(--navy); color:var(--gold-light);
+    display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed';
+    font-weight:700; font-size:16px; margin-bottom:18px; letter-spacing:0.02em;
+  }
+  .cat-card-lg h3{font-size:21px; color:var(--navy); margin:0 0 8px;}
+  .cat-card-lg p{font-size:14px; color:#6B6552; line-height:1.55; margin:0 0 16px;}
+  .cat-card-lg .go{font-size:13.5px; font-weight:700; color:#B08430;}
+  .cat-card-lg.coming-soon{
+    background:transparent; border:1.5px dashed #D9CFAF; display:flex; flex-direction:column;
+    align-items:flex-start; justify-content:center;
+  }
+  .cat-card-lg.coming-soon .badge{background:transparent; border:1.5px dashed #D9CFAF; color:#B08430;}
+  .cat-card-lg.coming-soon h3{color:#6B6552;}
+  .cat-card-lg.coming-soon p{margin-bottom:0;}
+
+  .mobiles-hero{background:var(--navy); color:var(--paper); padding:70px 0;}
+  .mobiles-hero .wrap{text-align:center; max-width:640px;}
+  .mobiles-hero .icon-badge{
+    width:72px; height:72px; border-radius:50%; background:var(--gold); color:#20170A;
+    display:flex; align-items:center; justify-content:center; font-size:32px; margin:0 auto 22px;
+  }
+  .mobiles-hero h1{font-size:clamp(32px,5vw,48px); margin:0 0 16px;}
+  .mobiles-hero p{color:#B9C0D6; font-size:16.5px; line-height:1.6; margin:0 0 28px;}
+  .mobiles-points{display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:640px; margin:0 auto 70px; padding:0 24px;}
+  .mobiles-points div{background:#fff; border:1px solid #E4DCC8; border-radius:8px; padding:18px 20px; font-size:14.5px; color:var(--ink); display:flex; gap:10px; align-items:flex-start;}
+  .mobiles-points span.dot{color:var(--gold); font-weight:700;}
 
   section{padding:70px 0;}
   .section-head{max-width:580px; margin:0 0 40px;}
@@ -167,9 +199,8 @@
   @media (max-width:820px){
     nav.links{display:none;}
     .burger{display:flex;}
-    .hero .wrap{grid-template-columns:1fr;}
-    .hero-visual{height:200px; order:-1;}
     .model-grid{grid-template-columns:1fr 1fr;}
+    .cat-cards{grid-template-columns:1fr 1fr;}
     .calc-box{grid-template-columns:1fr;}
     .steps{grid-template-columns:1fr 1fr;}
     .step{border-right:none; border-bottom:1px solid #263A6E; padding-bottom:20px;}
@@ -177,7 +208,11 @@
     .elig-grid{grid-template-columns:1fr;}
     .two-col{grid-template-columns:1fr;}
   }
-  @media (max-width:520px){ .model-grid{grid-template-columns:1fr;} }
+  @media (max-width:560px){
+    .model-grid{grid-template-columns:1fr;}
+    .cat-cards{grid-template-columns:1fr;}
+    .mobiles-points{grid-template-columns:1fr;}
+  }
 </style>
 </head>
 <body>
@@ -185,12 +220,13 @@
 <header class="nav">
   <div class="wrap">
     <div class="wordmark">
-      <span class="wm-shah">SH<span class="bolt">⚡</span>H</span>
+      <span class="wm-shah">SHAH</span>
       <span class="wm-sub">Financing Co.</span>
     </div>
     <nav class="links" id="navLinks">
       <a href="#/home" data-route="home">Home</a>
-      <a href="#/models" data-route="models">Models</a>
+      <a href="#/models" data-route="models">E-Bikes</a>
+      <a href="#/mobiles" data-route="mobiles">Mobiles</a>
       <a href="#/apply" data-route="apply">Apply</a>
       <a href="#/contact" data-route="contact">Contact</a>
     </nav>
@@ -199,7 +235,8 @@
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#/home" data-route="home">Home</a>
-    <a href="#/models" data-route="models">Models</a>
+    <a href="#/models" data-route="models">E-Bikes</a>
+    <a href="#/mobiles" data-route="mobiles">Mobiles</a>
     <a href="#/apply" data-route="apply">Apply</a>
     <a href="#/contact" data-route="contact">Contact</a>
   </div>
@@ -210,15 +247,15 @@
   <div class="wrap">
     <div>
       <div class="wordmark">
-        <span class="wm-shah">SH<span class="bolt">⚡</span>H</span>
+        <span class="wm-shah">SHAH</span>
         <span class="wm-sub">Financing Company</span>
       </div>
-      <p class="kicker">Electric Scooter Installment Plans</p>
-      <h1>Ride today.<br>Pay it off<br><em>a little at a time.</em></h1>
-      <p class="lead">15+ electric scooter models, real installment plans, no bank paperwork. 50% down payment, pay the rest over 3 to 12 months.</p>
+      <p class="kicker">A Financing Company</p>
+      <h1>Buy what you need.<br>Pay it off<br><em>a little at a time.</em></h1>
+      <p class="lead">Shah Financing makes everyday essentials affordable through simple installment plans — no bank paperwork, just 50% down and the rest over 3 to 12 months.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="#/apply">Apply for Installment</a>
-        <a class="btn btn-outline" href="#/models">See Models</a>
+        <a class="btn btn-outline" href="#/home" onclick="document.querySelector('.catalog').scrollIntoView({behavior:'smooth'}); return false;">See What We Finance</a>
       </div>
       <div class="hero-stats">
         <div>50%<span>Down payment</span></div>
@@ -226,17 +263,34 @@
         <div>4.5%<span>Markup per month</span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="90" cy="220" r="48" stroke="#C9932E" stroke-width="4"/>
-        <circle cx="300" cy="220" r="48" stroke="#C9932E" stroke-width="4"/>
-        <path d="M90 220 L170 120 L230 120 L300 220" stroke="#F7F5EF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-        <path d="M170 120 L150 220 L90 220" stroke="#F7F5EF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-        <path d="M230 120 L260 90 L300 90" stroke="#F7F5EF" stroke-width="4" stroke-linecap="round"/>
-        <rect x="255" y="95" width="30" height="14" rx="3" fill="#C9932E"/>
-        <circle cx="150" cy="220" r="4" fill="#F7F5EF"/>
-        <path d="M60 60 L90 60 L75 90 L100 90 L55 140" stroke="#C9932E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">What We Finance</p>
+      <h2>One simple installment plan, a growing list of products</h2>
+      <p>Shah Financing isn't tied to one product — we finance what people need. Every category follows the same terms: 50% down payment, 4.5% markup per month, 3 to 12 month tenure.</p>
+    </div>
+    <div class="cat-cards">
+      <a class="cat-card-lg" href="#/models">
+        <span class="badge">EB</span>
+        <h3>Electric Bikes</h3>
+        <p>15+ models across multiple brands — every one under PKR 270,000 cash price.</p>
+        <span class="go">Browse E-Bikes →</span>
+      </a>
+      <a class="cat-card-lg" href="#/mobiles">
+        <span class="badge">MP</span>
+        <h3>Mobile Phones</h3>
+        <p>Brand new, sealed box-pack mobile phones on the same easy installment terms.</p>
+        <span class="go">See Mobile Plans →</span>
+      </a>
+      <div class="cat-card-lg coming-soon">
+        <span class="badge">+</span>
+        <h3>More Categories Coming</h3>
+        <p>We're expanding what you can finance with us. Follow our Instagram for new additions.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -245,13 +299,13 @@
   <div class="wrap">
     <div class="section-head">
       <p class="kicker">Four Steps</p>
-      <h2>From inquiry to riding home</h2>
+      <h2>From inquiry to walking out with it</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">01</div><h3>Message or visit</h3><p>Send your details on WhatsApp or come see the bikes at the showroom.</p></div>
-      <div class="step"><div class="n">02</div><h3>Choose your plan</h3><p>Pick the model and tenure that fits your budget.</p></div>
-      <div class="step"><div class="n">03</div><h3>Sign & pay down payment</h3><p>CNIC, guarantor details and signed agreement — done at the showroom.</p></div>
-      <div class="step"><div class="n">04</div><h3>Ride away</h3><p>Bike handed over the same day, tracker fitted, monthly installments begin.</p></div>
+      <div class="step"><div class="n">01</div><h3>Message or visit</h3><p>Send your details on WhatsApp or come see us in person.</p></div>
+      <div class="step"><div class="n">02</div><h3>Choose your plan</h3><p>Pick the product and tenure that fits your budget.</p></div>
+      <div class="step"><div class="n">03</div><h3>Sign & pay down payment</h3><p>CNIC, guarantor details and signed agreement — done in person.</p></div>
+      <div class="step"><div class="n">04</div><h3>Take it home</h3><p>Handed over the same day, monthly installments begin.</p></div>
     </div>
   </div>
 </section>
@@ -312,6 +366,33 @@
 </section>
 </div><!-- /page-models -->
 
+<div class="page" id="page-mobiles">
+<section class="mobiles-hero">
+  <div class="wrap">
+    <div class="icon-badge">📱</div>
+    <p class="kicker" style="justify-content:center; display:flex;">Mobile Phones On Installment</p>
+    <h1>All box-pack mobile phones, available on easy installments</h1>
+    <p>Brand new, sealed box-pack phones — any brand or model you're after. Same simple terms as everything else at Shah Financing: 50% down, pay the rest over 3 to 12 months.</p>
+    <div class="hero-ctas" style="justify-content:center; display:flex;">
+      <a class="btn btn-gold" href="https://wa.me/923361266236" target="_blank" rel="noopener">WhatsApp Us for Models & Prices</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/shahfinancing?stkn=anZna2Z5YTYxYmh3" target="_blank" rel="noopener">Visit Our Instagram</a>
+    </div>
+  </div>
+</section>
+<div class="mobiles-points">
+  <div><span class="dot">●</span>Sealed, box-pack condition — never used</div>
+  <div><span class="dot">●</span>50% down payment, same as e-bikes</div>
+  <div><span class="dot">●</span>3, 6, 9 or 12 month plans available</div>
+  <div><span class="dot">●</span>Two salaried guarantors required</div>
+</div>
+<section style="padding-top:0;">
+  <div class="wrap" style="text-align:center;">
+    <p style="color:#6B6552; font-size:15px; max-width:560px; margin:0 auto 24px;">Phone stock changes often, so current models and prices are shared directly on WhatsApp and posted regularly on our Instagram page.</p>
+    <a class="btn btn-gold" href="#/apply">Apply for a Mobile Installment</a>
+  </div>
+</section>
+</div><!-- /page-mobiles -->
+
 <div class="page" id="page-apply">
 <section class="eligibility" id="eligibility">
   <div class="wrap">
@@ -359,7 +440,7 @@
     <div class="form-card" style="max-width:640px; margin:0 auto; text-align:center; padding:48px 32px;">
       <div style="width:64px; height:64px; border-radius:50%; background:var(--gold); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; font-size:28px;">📝</div>
       <h3 style="color:var(--navy); font-size:22px; margin:0 0 10px;">Installment Application Form</h3>
-      <p style="color:#6B6552; font-size:14.5px; margin:0 0 26px; line-height:1.6;">Applicant details, employment info, bike & plan selection, and both guarantors — all in one short form.</p>
+      <p style="color:#6B6552; font-size:14.5px; margin:0 0 26px; line-height:1.6;">Applicant details, employment info, product & plan selection (e-bike or mobile phone), and both guarantors — all in one short form.</p>
 
       <!-- GOOGLE_FORM_LINK: replace the href below with your real Google Form link -->
       <a href="https://forms.gle/xcrEpmZYNxjaRPWi9" target="_blank" rel="noopener" class="submit-btn" style="display:inline-block; text-decoration:none; width:auto; padding:16px 40px;">Open Application Form</a>
@@ -374,10 +455,13 @@
 <section style="background:var(--navy); color:var(--paper); padding:70px 0;">
   <div class="wrap">
     <p class="kicker" style="color:var(--gold-light);">Get In Touch</p>
-    <h2 style="color:#fff; font-size:clamp(28px,3.6vw,40px); margin:0 0 20px;">Visit the showroom or message us</h2>
-    <p style="color:#B9C0D6; font-size:16px; max-width:520px; margin:0 0 26px;">Come see the bikes in person, or reach out on WhatsApp for a quick reply. We'll confirm your plan and book a visit for documents and signing.</p>
-    <a class="btn btn-gold" href="https://wa.me/923361266236" target="_blank" rel="noopener">Message us on WhatsApp</a>
-    <p style="color:#9AA3C0; font-size:14.5px; margin-top:22px;">WhatsApp: 0336-1266236</p>
+    <h2 style="color:#fff; font-size:clamp(28px,3.6vw,40px); margin:0 0 20px;">Visit us or message us</h2>
+    <p style="color:#B9C0D6; font-size:16px; max-width:520px; margin:0 0 26px;">Whether it's an e-bike or a mobile phone, reach out on WhatsApp for a quick reply, or follow our Instagram for the latest stock and offers. We'll confirm your plan and book a visit for documents and signing.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="https://wa.me/923361266236" target="_blank" rel="noopener">Message us on WhatsApp</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/shahfinancing?stkn=anZna2Z5YTYxYmh3" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
+    <p style="color:#9AA3C0; font-size:14.5px; margin-top:22px;">WhatsApp: 0336-1266236 &nbsp;|&nbsp; Instagram: @shahfinancing</p>
   </div>
 </section>
 </div><!-- /page-contact -->
@@ -385,10 +469,13 @@
 <footer>
   <div class="wrap">
     <div class="wordmark">
-      <span class="wm-shah" style="color:#F7F5EF; font-size:19px;">SH<span class="bolt">⚡</span>H</span>
+      <span class="wm-shah" style="color:#F7F5EF; font-size:19px;">SHAH</span>
       <span class="wm-sub">Financing Co.</span>
     </div>
-    <div><a href="#/apply">Apply for a bike →</a></div>
+    <div style="display:flex; gap:20px; align-items:center;">
+      <a href="https://www.instagram.com/shahfinancing?stkn=anZna2Z5YTYxYmh3" target="_blank" rel="noopener">Instagram</a>
+      <a href="#/apply">Apply Now →</a>
+    </div>
   </div>
 </footer>
 
@@ -501,7 +588,7 @@
   calc();
 
   // ---------- Hash-based router (multi-page feel, single file) ----------
-  const PAGES = ['home','models','apply','contact'];
+  const PAGES = ['home','models','mobiles','apply','contact'];
   function showRoute(){
     let route = (location.hash || '#/home').replace('#/','').split('?')[0];
     if(!PAGES.includes(route)) route = 'home';
